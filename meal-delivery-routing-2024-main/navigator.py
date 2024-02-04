@@ -198,7 +198,7 @@ class Navigator:
             nodelist=np.atleast_1d(nodes),
             node_size=kwargs.pop("node_size", 15),
             node_color=kwargs.pop("node_color", "blue"),
-            node_shape=kwargs.pop("node_shape", "."),
+            node_shape=kwargs.pop("node_shape", ""),
             **kwargs
         )
 

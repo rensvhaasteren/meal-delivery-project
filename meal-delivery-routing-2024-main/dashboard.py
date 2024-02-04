@@ -1,5 +1,4 @@
-import sys
-from dash import Dash, html, dcc, dash_table, Input, Output, callback
+from dash import Dash, html, dcc, dash_table, callback
 from dash.dependencies import Input, Output, State
 import dash_bootstrap_components as dbc
 from dash.exceptions import PreventUpdate
@@ -457,7 +456,7 @@ def update_map(vehicle_startlocations, restaurant_locations):
                 ax = nav.display_route(route, ax=ax, edge_color="yellow", width = 1)
 
 
-    legend = Image.open("data\Legenda.jpg")
+    legend = Image.open("data/Legenda.jpg")
     legend = legend.resize((175, 105))
     height = legend.size[1]
     legend = np.array(legend).astype(float) / 255
@@ -825,9 +824,9 @@ def update_map_callback(on):
 These lines import the necessary files. Then the app is run.
 '''
 if __name__ == '__main__':
-    heatmap = sf.import_json_file("Data/heatmap_v1.json")
+    heatmap = sf.import_json_file("data/heatmap_v1.json")
     quantile_weekday = sf.import_json_file("data/quantile_weekday.json")
-    restaurant_data = sf.import_json_file("Data/restaurant_data_v1.json")
+    restaurant_data = sf.import_json_file("data/restaurant_data_v1.json")
     nav = Navigator("data/paris_map.txt")
     vehicle_distances = sf.import_pickle_file('data/area_distances_dict.pkl')
     order_velocity_data = sf.import_json_file('data/order_velocity_means.json')
