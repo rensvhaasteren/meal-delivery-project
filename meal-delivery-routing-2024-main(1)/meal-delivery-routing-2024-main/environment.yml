@@ -1,0 +1,16 @@
+name: meal-delivery-routing
+channels:
+  - anaconda
+  - conda-forge
+  - defaults
+dependencies:
+  - python==3.10.13
+  - networkx==3.1
+  - numpy==1.26.0
+  - pandas==2.1.1
+  - tqdm==4.65.0
+  - shapely==1.8.2
+  - geopandas==0.14.1
+  - cartopy==0.22.0
+  - pillow==9.0.0
+  - dash_table
